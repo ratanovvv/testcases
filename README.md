@@ -26,7 +26,7 @@ cd openshift-ansible
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/prerequisites.yml
 sudo ansible-playbook -i inventory/hosts.localhost playbooks/deploy_cluster.yml
 ```
-Now you have working EFK. You can login through this [link](https://kibana.router.default.svc.cluster.local)
+Now you have working EFK. You can login through this [link](https://kibana.router.default.svc.cluster.local). User `admin`. Password `redhat`.
 ## Login to Openshift
 ```bash
 sudo cp /etc/origin/master/admin.kubeconfig ./
