@@ -32,6 +32,7 @@ Now you have working EFK. You can login through this [link](https://kibana.route
 sudo cp /etc/origin/master/admin.kubeconfig ./
 sudo chown ${USER}:${USER} ./admin.kubeconfig
 export KUBECONFIG=$(pwd)/admin.kubeconfig
+oc login # User: admin, Password: redhat
 ```
 ## Create Elasticsearch(6.3.2) and Kibana(6.3.2) in Openshift
 ```bash
