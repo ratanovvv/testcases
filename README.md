@@ -5,7 +5,7 @@
 ## Software prerequisites
 ```bash
 sudo yum install -y epel-release
-sudo yum install -y install -y ansible pyOpenSSL \
+sudo yum install -y ansible pyOpenSSL \
   python-cryptography python-lxml git python2-passlib \
   java-1.8.0-openjdk-headless patch httpd-tools
 ```
