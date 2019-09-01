@@ -1,0 +1,24 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  creationTimestamp: 2019-09-01T10:26:38Z
+  labels:
+    app: pg
+  name: pg
+  namespace: custom
+  resourceVersion: "112085"
+  selfLink: /apis/route.openshift.io/v1/namespaces/custom/routes/pg
+  uid: fb25b30c-cca2-11e9-af08-005056a37de3
+spec:
+  host: pg-custom.router.default.svc.cluster.local
+  port:
+    targetPort: 5432-tcp
+  to:
+    kind: Service
+    name: pg
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress: null

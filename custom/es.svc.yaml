@@ -1,0 +1,24 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  creationTimestamp: 2019-09-01T13:24:13Z
+  labels:
+    app: es
+  name: es
+  namespace: custom
+  resourceVersion: "133285"
+  selfLink: /apis/route.openshift.io/v1/namespaces/custom/routes/es
+  uid: ca5ebb48-ccbb-11e9-9a82-005056a37de3
+spec:
+  host: es-custom.router.default.svc.cluster.local
+  port:
+    targetPort: 9200-tcp
+  to:
+    kind: Service
+    name: es
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress: null

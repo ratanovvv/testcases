@@ -1,0 +1,15 @@
+---
+- name: Create Filebeat Config
+  template:
+    src: filebeat.j2
+    dest: /etc/filebeat.yml
+- name: Filebeat Docker
+  docker_container:
+    name: filebeat
+    image: "{{ docker_image_url }}"
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - /var/lib/docker/containers:/var/lib/docker/containers
+    - /etc/filebeat.yml:/usr/share/filebeat/filebeat.yml
+    user: "root"
+    restart_policy: always

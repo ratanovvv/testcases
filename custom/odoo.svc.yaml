@@ -1,0 +1,24 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  creationTimestamp: 2019-09-01T10:29:02Z
+  labels:
+    app: odoo
+  name: odoo
+  namespace: custom
+  resourceVersion: "112418"
+  selfLink: /apis/route.openshift.io/v1/namespaces/custom/routes/odoo
+  uid: 5173febe-cca3-11e9-af08-005056a37de3
+spec:
+  host: odoo-custom.router.default.svc.cluster.local
+  port:
+    targetPort: 8069-tcp
+  to:
+    kind: Service
+    name: odoo
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress: null
