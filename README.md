@@ -16,8 +16,10 @@ git clone --single-branch --branch release-3.11 \
 ```
 ## Copy This Repository to Openshift Ansible
 ```bash
-cd openshift-ansible
 git clone --single-branch --branch openshift https://github.com/ratanovvv/testcases.git .
+cd ..
+cp -R testcases/* openshift-ansible/
+cd openshift-ansible
 ```
 ## Setup Openshift for localhost
 ```bash
